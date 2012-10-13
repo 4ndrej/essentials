@@ -12,7 +12,7 @@ yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusi
 wget -O /etc/yum.repos.d/sublime2.repo http://repo.cloudhike.com/sublime3/fedora/sublime2.repo
 
 # install stuff
-yum install -y mc screen git ruby sublime-text
+yum install -y mc screen git subversion ruby sublime-text
 
 # spomalena klavesnica
 # http://blog.jpd.sk/2012/08/spomalena-klavesnica-problem-s-xfce-a11y.html
