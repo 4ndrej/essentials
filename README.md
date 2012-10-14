@@ -9,8 +9,9 @@ Every time I install new machine I need to setup few common essntial goodies to 
 * mc, screen, git, subversion and sublime-text
 * Google Chrome
 * mp3/mp4 players
+* ssh keys
 
-I want to script those repeating tasks, so I created this bunch of scripts for me (and maybe for others too).
+I wanted to script those repeating tasks, so I created this bunch of scripts for me (and maybe for others too).
 
 
 Usage
@@ -24,10 +25,10 @@ or you can download partial scripts directly from github
 
     wget https://raw.github.com/4ndrej/essentials/master/f17-core.sh
 
-Then edit the script or run it as is.
+Then maybe edit the script to fit your needs or run it as is.
 
 
 How can I help?
 ---------------
 
-Once you have [forked the project][github-forking] send a [pull request][github-pull-requests] to improve this little script collection.
+Once you have **forked the project**, send a **pull request** to improve this little script collection.
