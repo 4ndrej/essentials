@@ -14,7 +14,7 @@ wget -O /etc/yum.repos.d/sublime2.repo http://repo.cloudhike.com/sublime3/fedora
 # install stuff
 yum install -y mc screen git subversion ruby sublime-text
 
-# spomalena klavesnica
+# keyboard slowdown
 # http://blog.jpd.sk/2012/08/spomalena-klavesnica-problem-s-xfce-a11y.html
 echo -e "[org/gnome/desktop/a11y/keyboard]\nenable=false\n" > /etc/dconf/db/gdm.d/01-no-a11y-keyboard
 dconf update
