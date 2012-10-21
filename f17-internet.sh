@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# links text mode browser
+yum install links
+
 # Torrent stuff
 yum install transmission
 
