@@ -24,7 +24,7 @@ dconf update
 
 # cleanup
 yum remove claws-mail*
-=======
+
 # selinux disable
 sed -i s/SELINUX=enforcing/SELINUX=disabled/g /etc/selinux/config
 setenforce 0
