@@ -8,3 +8,11 @@ yum install gstreamer-ffmpeg
 
 # Video editing stuff
 yum install avidemux
+
+# image viewer
+yum install mirage
+yum remove ristretto
+
+# the gimp
+yum install gimp
+
