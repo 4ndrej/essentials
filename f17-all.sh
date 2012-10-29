@@ -1,7 +1,7 @@
 #!/bin/bash
 
-./f17-core.sh
-./f17-internet.sh
-./f17-media.sh
-./f17-office.sh
+./f17-core.sh $1
+./f17-internet.sh $1
+./f17-media.sh $1
+./f17-office.sh $1
 

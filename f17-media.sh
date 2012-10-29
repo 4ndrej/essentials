@@ -1,18 +1,18 @@
 #!/bin/bash
 
 # Media stuff
-yum install gstreamer-plugins-good gstreamer-plugins-ugly gstreamer-plugins-base gstreamer-plugins-bad-free
+yum $1 install gstreamer-plugins-good gstreamer-plugins-ugly gstreamer-plugins-base gstreamer-plugins-bad-free
 
 # MP4 video playback
-yum install gstreamer-ffmpeg
+yum $1 install gstreamer-ffmpeg
 
 # Video editing stuff
-yum install avidemux
+yum $1 install avidemux
 
 # image viewer
-yum install mirage
+yum $1 install mirage
 yum remove ristretto
 
 # the gimp
-yum install gimp
+yum $1 install gimp
 

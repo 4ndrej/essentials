@@ -5,17 +5,17 @@ ssh-keygen
 
 # rpmfusion repo
 # http://blog.jpd.sk/2012/08/fedora-17-essentials.html
-yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
+yum $1 localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
 
 # sublime-text repo
 # http://blog.jpd.sk/2012/08/fedora-17-essentials.html
 wget -O /etc/yum.repos.d/sublime2.repo http://repo.cloudhike.com/sublime2/fedora/sublime2.repo
 
 # install stuff
-yum install -y mc screen git subversion ruby sublime-text
+yum $1 install mc screen git subversion ruby sublime-text
 
 # tools
-yum install -y unrar
+yum $1 install unrar
 
 # keyboard slowdown
 # http://blog.jpd.sk/2012/08/spomalena-klavesnica-problem-s-xfce-a11y.html
@@ -23,7 +23,7 @@ echo -e "[org/gnome/desktop/a11y/keyboard]\nenable=false\n" > /etc/dconf/db/gdm.
 dconf update
 
 # cleanup
-yum remove claws-mail*
+yum $1 remove claws-mail*
 
 # selinux disable
 sed -i s/SELINUX=enforcing/SELINUX=disabled/g /etc/selinux/config
