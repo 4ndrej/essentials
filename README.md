@@ -10,6 +10,7 @@ Every time I install new machine I need to setup few common essntial goodies to 
 * Google Chrome
 * mp3/mp4 players
 * ssh keys
+* [launchers] for menu launcher shortcuts collection
 
 I wanted to script those repeating tasks, so I created this bunch of scripts for me (and maybe for others too).
 
