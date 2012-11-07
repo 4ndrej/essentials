@@ -36,4 +36,4 @@ Once you have [forked the project][3], update it and send a [pull request][1] to
 
 [3]: https://github.com/4ndrej/essentials/fork
 [1]: https://github.com/4ndrej/essentials/pulls
-[2]: launchers
+[2]: ./tree/master/launchers
