@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=SOAP UI
+GenericName=SOAP UI
+Comment=IDE
+Exec=/home/andrej/bin/soapui/bin/soapui.sh
+Icon=/home/andrej/bin/soapui/bin/soapui32.xpm
+Terminal=false
+Type=Application
+Categories=Development;
+StartupNotify=true

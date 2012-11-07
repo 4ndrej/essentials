@@ -7,3 +7,10 @@ push.sh
 -------
 The push.sh tool pushes the whatever.desktop file to local share/applications folder.
 
+Manual tasks
+------------
+SoapUI:
+    # icon preparation
+    cd soapui*/bin
+    imagemagick soapui32.png soapui32.xpm
+
