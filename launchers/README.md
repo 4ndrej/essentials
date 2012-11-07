@@ -5,12 +5,18 @@ Fedora stores launcher shortcuts in /usr/share/applications or in ~/.local/share
 
 push.sh
 -------
-The push.sh tool pushes the whatever.desktop file to local share/applications folder.
+The push.sh tool pushes the whatever.desktop file to ```~/.local/share/applications``` folder.
+
+**Usage:**
+```bash
+./push.sh whatever.desktop
+```
 
 Manual tasks
 ------------
-SoapUI:
-    # icon preparation
-    cd soapui*/bin
-    imagemagick soapui32.png soapui32.xpm
-
+###SoapUI
+```bash
+# icon preparation
+cd soapui*/bin
+imagemagick soapui32.png soapui32.xpm
+```
