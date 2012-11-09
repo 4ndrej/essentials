@@ -11,7 +11,7 @@ yum $1 install avidemux
 
 # image viewer
 yum $1 install mirage
-yum remove ristretto
+yum $1 remove ristretto
 
 # the gimp
 yum $1 install gimp
