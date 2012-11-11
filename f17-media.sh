@@ -16,3 +16,7 @@ yum $1 remove ristretto
 # the gimp
 yum $1 install gimp
 
+# youtube downloader
+wget https://raw.github.com/rg3/youtube-dl/master/youtube-dl
+chmod +x youtube-dl
+
