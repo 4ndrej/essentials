@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=SQuirreL
+GenericName=SQuirreL
+Comment=DB Manager
+Exec=/opt/squirrel/squirrel-sql.sh
+Icon=/opt/squirrel/icons/acorn.xpm
+Terminal=false
+Type=Application
+Categories=Development;
+StartupNotify=true
