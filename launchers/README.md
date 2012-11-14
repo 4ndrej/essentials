@@ -15,8 +15,11 @@ The push.sh tool pushes the whatever.desktop file to ```~/.local/share/applicati
 Manual tasks
 ------------
 ###SoapUI
+download from [sourceforge][1]
 ```bash
 # icon preparation
 cd soapui*/bin
 imagemagick soapui32.png soapui32.xpm
 ```
+[1]:http://sourceforge.net/projects/soapui/files/soapui/
+
