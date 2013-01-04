@@ -16,6 +16,8 @@ yum $1 install mc screen git subversion ruby sublime-text
 
 # tools
 yum $1 install unrar
+wget http://pkgs.repoforge.org/rar/rar-3.8.0-1.el6.rf.x86_64.rpm
+yum $1 localinstall rar-3.8.0-1.el6.rf.x86_64.rpm
 
 # keyboard slowdown
 # http://blog.jpd.sk/2012/08/spomalena-klavesnica-problem-s-xfce-a11y.html
@@ -28,6 +30,9 @@ yum $1 remove claws-mail*
 # selinux disable
 sed -i s/SELINUX=enforcing/SELINUX=disabled/g /etc/selinux/config
 setenforce 0
+
+#firewall config
+yum $1 install system-config-firewall
 
 # grub2 - set default
 # cd /boot/grub2
