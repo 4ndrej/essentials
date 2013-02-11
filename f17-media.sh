@@ -7,7 +7,7 @@ yum $1 install gstreamer-plugins-good gstreamer-plugins-ugly gstreamer-plugins-b
 yum $1 install gstreamer-ffmpeg
 
 # Video editing stuff
-yum $1 install avidemux
+yum $1 install avidemux ffmpeg
 
 # image viewer
 yum $1 install mirage
@@ -19,4 +19,6 @@ yum $1 install gimp
 # youtube downloader
 wget https://raw.github.com/rg3/youtube-dl/master/youtube-dl
 chmod +x youtube-dl
+
+echo download and install https://github.com/chamfay/Curlew/archive/master.zip please
 
