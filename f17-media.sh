@@ -14,7 +14,7 @@ yum $1 install mirage
 yum $1 remove ristretto
 
 # the gimp
-yum $1 install gimp
+yum $1 install gimp gimp-lqr-plugin
 
 # youtube downloader
 wget https://raw.github.com/rg3/youtube-dl/master/youtube-dl
