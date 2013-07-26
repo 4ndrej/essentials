@@ -1,0 +1,205 @@
+#!/bin/sh
+###############################################################################
+#
+#       Name:           wfcmgr.msg 
+#
+#       Version:        $Id: //icaclient/unix12.1/client/linux/RPM/en/wfcmgr.msg#1 $
+#
+#       Purpose:        Localisation parameters for dummy wfcmgr script
+#			for RPM install.
+#
+#       Copyright 2002-2010 Citrix Systems, Inc. All rights reserved.
+#
+###############################################################################
+MORE_CMD=more
+XTERM_PROGS="xterm konsole gnome-terminal xfce4-terminal x-terminal-emulator" 
+
+INSTALLER_YES=yes
+INSTALLER_Y=y
+INSTALLER_NO=no
+INSTALLER_N=n
+PROMPT_Y=
+PROMPT_N=
+
+wfcmgr1="Continue with ICA client execution? [default $INSTALLER_NO]:"
+
+wfcmgr2="License agreement refused."
+
+getyesno1="You must answer $INSTALLER_YES or $INSTALLER_NO"
+
+getyesno2="default"
+
+eulawintitle="Agreement"
+
+#!/bin/sh
+###############################################################################
+#
+#	Name:		wfcmgr
+#
+#	$Id: //icaclient/unix12.1/client/linux/RPM/wfcmgr#1 $
+#
+#	Purpose:	Wrapper for wfcmgr.bin to present EULA the first time 
+#			each user runs it.
+#
+#	Copyright 1999-2010 Citrix Systems, Inc. All rights reserved.
+#
+###############################################################################
+
+# Configuration items for Linux
+ECHO_CMD=echo
+echo_no_nl="echo -n"
+
+# Functions copied from installation scripts
+
+###############################################################################
+#
+# getyesno keeps asking user to answer yes or no. $1 parameter passed to 
+# getyesno is the default answer
+#
+###############################################################################
+getyesno(){
+ANSWER=""
+while test "$ANSWER" = ""
+do
+	read response
+	test "x$response" = "x" && response=$1
+	response=`$ECHO_CMD $response | tolower`
+	case $response in
+	$INSTALLER_Y|$INSTALLER_YES)
+		ANSWER=$INSTALLER_YES
+		;;
+	$INSTALLER_N|$INSTALLER_NO)
+		ANSWER=$INSTALLER_NO
+		;;
+	*)
+		ANSWER=""
+		;;
+	esac
+	if test "$ANSWER" = ""
+	then
+		$echo_no_nl $getyesno1
+		if test "$1" != ""
+		then
+			EXTRA_PROMPT=$PROMPT_Y	
+			test "$1" = "$INSTALLER_YES" || EXTRA_PROMPT=$PROMPT_N
+			$echo_no_nl " [$getyesno2 $1$EXTRA_PROMPT]:"
+		fi
+		$echo_no_nl ' '
+	fi
+done
+}
+###############################################################################
+
+###############################################################################
+#
+#  tolower() copies the standard input to the output, translating any upper
+#  case letters to lower case.
+#
+###############################################################################
+tolower(){
+	 <&0 tr ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz >&1
+}
+
+###############################################################################
+#
+#  create_dir() creates a directory and any required parent directories.
+#
+#  This shell function is necessary on HP because of a bug with mkdir -p
+#  that means that you cannot do mkdir -p on an automounted file system
+#  What we have to do is manually create each directory in turn.
+#  It returns 0 in $RETVAL if successful, otherwise 1 in $RETVAL
+#
+###############################################################################
+create_dir(){
+	TARGET_DIR=$1
+	CURR_DIR=""
+	# Turn /'s into spaces to get list of parent directories
+	DIR_LIST=`$ECHO_CMD $TARGET_DIR | sed 's/\// /g'`
+
+	# For each directory in the path, starting from the top, if it
+	# doesn't exist, create it.
+	for dir in $DIR_LIST
+	do
+		CURR_DIR=$CURR_DIR/$dir
+		test -d $CURR_DIR || mkdir $CURR_DIR 2>/dev/null
+	done
+	# The target directory should now be made. If not return an error
+	# in RETVAL
+	RETVAL=0
+	test -d $TARGET_DIR || RETVAL=1
+}
+
+###############################################################################
+# Main part of script
+###############################################################################
+
+# Get the directory containing this script as an absolute path.
+
+ICAROOT=`dirname $0`
+echo $ICAROOT | grep -q '^/' || ICAROOT=`pwd`/$ICAROOT
+
+# Only present EULA if not already accepted
+
+if [ -f $HOME/.ICAClient/.eula_accepted ]
+then
+    # EULA has been accepted on a previous occasion
+    exec $ICAROOT/wfcmgr.bin $1 $2 "$3"
+fi
+
+if [ "$1" = "present_eula" ]
+then
+	# We are running in a temporary text window.  Display EULA.
+
+	$MORE_CMD $ICAROOT/eula.txt
+	$ECHO_CMD
+
+	$echo_no_nl $wfcmgr1' '
+	getyesno $INSTALLER_NO
+	if [ "$ANSWER" != "$INSTALLER_YES" ]
+	then
+	        $ECHO_CMD
+		$ECHO_CMD $wfcmgr2
+		sleep 3
+		exit 1
+	fi
+	create_dir $HOME/.ICAClient
+	touch $HOME/.ICAClient/.eula_accepted
+	exit 0
+else
+	# Find a suitable terminal emulator and show the EULA.
+
+	for i in $XTERM_PROGS
+	do
+	        unset GNOME_TERM
+		XTERM_CMD=`which $i 2>/dev/null`
+		if [ -n "$XTERM_CMD" ]
+		then
+			if [ "$i" = "kterm" -o "$i" = "xterm" ]
+			then
+				XTERM_TITLE_OPT=-title
+			elif [ "$i" = "gnome-terminal" ]
+			then
+			        GNOME_TERM=1
+			        XTERM_TITLE_OPT=-t
+			fi
+			break;
+		fi
+	done
+
+	# Display a terminal with the EULA.
+
+    [ -z "$XTERM_CMD" ] && XTERM_CMD=x-terminal-emulator
+    [ -z "$XTERM_TITLE_OPT" ] && unset eulawintitle
+
+	if  [ -z "$GNOME_TERM" ]
+	then
+            $XTERM_CMD $XTERM_TITLE_OPT $eulawintitle -e $0 present_eula
+        else
+            $XTERM_CMD --disable-factory $XTERM_TITLE_OPT $eulawintitle -e "$0 present_eula"
+        fi
+fi
+
+# Start the real wfcmgr if the EULA was accepted.
+
+[ -f $HOME/.ICAClient/.eula_accepted ] && exec $ICAROOT/wfcmgr.bin $1 $2 "$3"
+
