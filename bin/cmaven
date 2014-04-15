@@ -1,0 +1,13 @@
+#!/bin/bash
+# colorize definition for maven
+colorize \
++l30:"\[WARNING\]" \
++l10:"\[ERROR\]" \
+-l00:"----+" \
+-l00:" Building " \
++l30:[A-Z]+\ SUCCESS.\* \
++l10:[A-Z]+\ FAILURE \
++l20:\\.+\ SUCCESS \
++l10:\\.+\ FAILURE \
++l30:\\.+\ SKIPPED
+
