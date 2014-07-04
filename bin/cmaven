@@ -8,6 +8,8 @@ colorize \
 +l30:[A-Z]+\ SUCCESS.\* \
 +l10:[A-Z]+\ FAILURE \
 +l20:\\.+\ SUCCESS \
++l20:\ \ SUCCESS \
 +l10:\\.+\ FAILURE \
++l10:\ \ FAILURE \
 +l30:\\.+\ SKIPPED
 
