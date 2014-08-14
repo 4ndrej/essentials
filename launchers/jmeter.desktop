@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=JMeter
+GenericName=JMeter
+Comment=Test Tool gizmo
+Exec=/home/andrej/bin/apache-jmeter/bin/jmeter.sh
+Icon=/home/andrej/bin/apache-jmeter/jmeter.png
+Terminal=false
+Type=Application
+Categories=Development;
+StartupNotify=true
