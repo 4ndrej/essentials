@@ -1,0 +1,8 @@
+#!/bin/bash
+# create placeholders from avi files in current direcotory
+ls -1 [A-Za-z]*.avi \
+| sed \
+ -e "s/\.avi$/\"/g" \
+ -e "s/^/touch \"/g" \
+| bash
+
