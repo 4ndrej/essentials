@@ -1,26 +1,32 @@
-h1. how to install ruby environment
+# how to install ruby environment
 
-h2. rbenv
+## rbenv
     git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
     echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
     echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
     source ~/.bash_profile
 
-h2. rbenv plugins
-h3. ruby-build
-    git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+## rbenv plugins
 
-h2. build tools
+### plugin ruby-build
+ruby-build is an rbenv plugin that provides an rbenv install command to compile and install different versions of Ruby on UNIX-like systems.
+    git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+    
+### plugin rbenv-gem-rehash
+Never run rbenv rehash again. This rbenv plugin automatically runs rbenv rehash every time you install or uninstall a gem.
+    git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
+
+## build tools
     yum install gcc-c++ openssl-devel
 
-h2. list available ruby versions
+## list available ruby versions
     rbenv install -l
 
-h2. install ruby-2.1.4
+## install ruby-2.1.4
     time rbenv install -v 2.1.4
 
-h2. setup ruby version
+## setup ruby version
     rbenv global 2.1.4
 
-h2. test
+## test
     ruby -v
