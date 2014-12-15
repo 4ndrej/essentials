@@ -13,7 +13,8 @@ yum install screen mc wget curl vim
 # network tools
 # net-tools: ifconfig
 # traceroute: traceroute
-yum install net-tools traceroute
+# bind-utils: dig
+yum install net-tools traceroute bind-utils
 
 # htop
 # http://www.cyberciti.biz/faq/installing-rhel-epel-repo-on-centos-redhat-7-x/
