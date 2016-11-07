@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Curlew
+Icon=/home/andrej/bin/gitkraken/gitkraken.png
+Exec=/home/andrej/bin/gitkraken/gitkraken
+Name[en]=GitKraken
+Name[en_US]=GitKraken
+Comment=Git gui
+Comment[en_US]=Git gui
+Categories=Development
+Encoding=UTF-8
+Type=Application
+Terminal=false
