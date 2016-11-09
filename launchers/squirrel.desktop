@@ -1,10 +1,12 @@
 [Desktop Entry]
-Name=SQuirreL
-GenericName=SQuirreL
-Comment=DB Manager
-Exec=/opt/squirrel/squirrel-sql.sh
-Icon=/opt/squirrel/icons/acorn.xpm
-Terminal=false
+Name=SQuirreL SQL Client
+Icon=/home/andrej/bin/squirrel-sql/icons/acorn.ico
+Exec=/home/andrej/bin/squirrel-sql/squirrel-sql.sh
+Name[en]=SQuirreL SQL Client
+Name[en_US]=SQuirreL SQL Client
+Comment=An ISQL tool
+Comment[en]=An ISQL tool
+Categories=Development
+Encoding=UTF-8
 Type=Application
-Categories=Development;
-StartupNotify=true
+Terminal=false
