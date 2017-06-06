@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Firefox
+GenericName=Firefox
+Comment=Internet browser
+Exec=/home/andrej/bin/firefox/firefox
+Icon=/home/andrej/bin/firefox/browser/icons/mozicon128.png
+Terminal=false
+Type=Application
+Categories=Internet;Network;
+StartupNotify=true
