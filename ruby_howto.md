@@ -17,16 +17,19 @@ Never run rbenv rehash again. This rbenv plugin automatically runs rbenv rehash 
     git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 
 ## build tools
-    yum install gcc-c++ openssl-devel
+    dnf install gcc-c++ openssl-devel
 
 ## list available ruby versions
     rbenv install -l
 
-## install ruby-2.1.4
-    time rbenv install -v 2.1.4
+## install ruby-2.3.1
+    time rbenv install -v 2.3.1
 
 ## setup ruby version
-    rbenv global 2.1.4
+    rbenv global 2.3.1
+
+## check project local ruby version (.ruby-version file)
+    rbenv local 2.3.1
 
 ## test
     ruby -v
