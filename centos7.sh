@@ -2,13 +2,11 @@
 #
 
 # epel
-cd ~/install
-wget https://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
-yum localinstall -y epel-release-7-5.noarch.rpm
-cd ..
+yum install epel-release
 
 # tools
-yum install screen mc wget curl vim
+yum install screen mc wget curl vim bzip2 p7zip tree
+yum install yum-plugin-changelog yum-plugin-remove-with-leaves yum-utils
 
 # network tools
 # net-tools: ifconfig
@@ -22,3 +20,7 @@ yum install htop
 
 # git
 yum install git tig
+
+# java
+yum install java-1.8.0-openjdk-devel
+
