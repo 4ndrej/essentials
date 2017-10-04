@@ -1,6 +1,6 @@
 # how to install ruby environment
 
-## rbenvA
+## rbenv
     dnf install git
     git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
     echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
