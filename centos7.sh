@@ -24,3 +24,6 @@ yum install git tig
 # java
 yum install java-1.8.0-openjdk-devel
 
+#configs
+git config --global color.ui auto
+

@@ -6,6 +6,7 @@ chmod +x ~/bin/colorize.pl
 
 # development
 dnf install git git-cola tig
+git config --global color.ui auto
 dnf install redshift
 wget -O ~/bin/cmaven https://raw.githubusercontent.com/4ndrej/colorize/master/cmaven
 chmod +x ~/bin/cmaven
