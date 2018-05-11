@@ -1,0 +1,16 @@
+[Desktop Entry]
+Version=1.0
+Name=Sublime Text 3
+GenericName=Text Editor
+
+Exec=/home/andrej/bin/sublime_text_3/sublime_text
+Terminal=false
+Icon=/home/andrej/bin/sublime_text_3/Icon/48x48/sublime-text.png
+Type=Application
+Categories=TextEditor;IDE;Development
+X-Ayatana-Desktop-Shortcuts=NewWindow
+
+[NewWindow Shortcut Group]
+Name=New Window
+Exec=sublime -n
+TargetEnvironment=Unity
