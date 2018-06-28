@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=dLauncher
+Icon=/home/andrej/.ditec/dlauncher-bin/dlauncher.png
+Exec=/home/andrej/.ditec/dlauncher-bin/dLauncher
+Version=1.0
+Type=Application
+Terminal=false
+Categories=Office;

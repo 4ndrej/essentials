@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=eID Klient
+Icon=/usr/lib/eidklient/img/sk_logo.png
+Exec=/usr/bin/eIdKlient
+Version=1.0
+Type=Application
+Terminal=false
+Categories=Office;
