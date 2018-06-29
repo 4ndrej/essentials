@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=dLauncher
-Icon=/home/andrej/.ditec/dlauncher-bin/dlauncher.png
+Icon=/home/andrej/.local/share/icons/hicolor/48x48/apps/ditec-dlauncher.png
 Exec=/home/andrej/.ditec/dlauncher-bin/dLauncher
 Version=1.0
 Type=Application
