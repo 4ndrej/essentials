@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=Eclipse 3.8
-GenericName=Eclipse 3.8
+Name=Eclipse 4.8
+GenericName=Eclipse 4.8
 Comment=IDE
 Exec=/home/andrej/bin/eclipse/eclipse
 Icon=/home/andrej/bin/eclipse/icon.xpm
