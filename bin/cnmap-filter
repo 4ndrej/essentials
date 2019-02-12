@@ -1,0 +1,10 @@
+#!/bin/bash
+# colorize definition for nmap
+colorize \
+-l30:"Nmap scan report for" \
+-l00:"Starting Nmap" \
+-l00:"Host is up" \
+-l00:"DNS record for" \
+-l00:"Nmap done" \
++l10:filtered \
++l20:open
