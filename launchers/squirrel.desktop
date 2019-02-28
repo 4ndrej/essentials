@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=SQuirreL SQL Client
-Icon=/home/andrej/bin/squirrel-sql/icons/acorn.ico
+Icon=/home/andrej/bin/squirrel-sql/icons/acorn.xpm
 Exec=/home/andrej/bin/squirrel-sql/squirrel-sql.sh
 Name[en]=SQuirreL SQL Client
 Name[en_US]=SQuirreL SQL Client

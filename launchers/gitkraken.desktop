@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=GitKraken
-Icon=/home/andrej/bin/gitkraken/gitkraken.png
+Icon=/home/andrej/bin/gitkraken.png
 Exec=/home/andrej/bin/gitkraken/gitkraken
 Name[en]=GitKraken
 Name[en_US]=GitKraken
