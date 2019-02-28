@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Postman
+Icon=/home/andrej/bin/Postman/app/resources/app/assets/icon.png
+Exec=/home/andrej/bin/Postman/app/Postman
+Name[en]=Postman
+Comment=REST API tool
+Categories=GNOME;GTK;Development;
+Encoding=UTF-8
+Type=Application
+Terminal=false
+
