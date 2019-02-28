@@ -27,17 +27,17 @@ Never run rbenv rehash again. This rbenv plugin automatically runs rbenv rehash 
 
     rbenv install -l
 
-## install ruby-2.4.2
+## install ruby-2.5.1
 
-    time rbenv install -v 2.4.2
+    time rbenv install -v 2.5.1
 
 ## setup ruby version
 
-    rbenv global 2.4.2
+    rbenv global 2.5.1
 
 ## check project local ruby version (.ruby-version file)
 
-    rbenv local 2.4.2
+    rbenv local 2.5.1
 
 ## test
 
